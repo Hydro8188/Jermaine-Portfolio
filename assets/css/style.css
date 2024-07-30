@@ -21,8 +21,7 @@ body {
 }
 
 h1,
-h2,
-h3,
+h2 h3,
 h4,
 h5,
 h6 {
@@ -81,6 +80,7 @@ nav a:last-child {
 }
 
 main {
+  display: flex;
   margin-top: 20px;
   margin-bottom: 45px;
 }
@@ -91,7 +91,7 @@ main {
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
-  min-height: 30vh;
+  min-height: 10vh;
   color: var(--light);
   padding: 2% 6%;
   display: flex;
@@ -99,6 +99,7 @@ main {
   align-items: flex-end;
   text-align: right;
 }
+
 
 .hero-banner div {
   flex: 0 0 90%;
@@ -130,7 +131,7 @@ main {
   justify-content: space-between;
 }
 
-.page-section > h2 {
+.page-section>h2{
   flex: 0 0 20%;
   text-align: right;
   padding-right: 15px;
@@ -139,7 +140,7 @@ main {
   line-height: 1.1;
 }
 
-.page-section > div {
+.page-section>div {
   flex: 0 0 77%;
 }
 
@@ -156,7 +157,7 @@ main {
 .flex-item {
   border: 5px solid var(--secondary);
   background-color: var(--primary);
-  color: var(--tertiary);
+  color: var(--light);
   min-height: 150px;
   max-height: 150px;
   flex-basis: calc(50% - 1em);
@@ -165,16 +166,23 @@ main {
   padding: 0 0 20px 0;
   margin: 0.5em;
   text-decoration: none;
-  background-blend-mode: soft-light;
+  background-blend-mode: soft-tertiary;
   background-size: 150%;
   transition: all 0.5s;
   font-size: 0.9rem;
 }
 
+aside {
+  flex: 30%;
+  background-color: #b9c6ae;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
 /* feature first portfolio item */
 .flex-item:first-child {
-    min-height: 400px;
-    flex-basis: 100%;
+  min-height: 400px;
+  flex-basis: 100%;
 }
 
 .flex-item:hover {
@@ -218,87 +226,76 @@ main {
   color: var(--secondary);
 }
 
-/* portfolio project images */
-/* TODO: Add portfolio project images here using background images*/
+.personalItems {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
 
 .run-buddy {
-  padding: 10px;
-  width: 250px;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
+  background-image: url("https://www.womensrunning.com/wp-content/uploads/sites/2/2017/08/friends-2-compressor.jpg");
 }
 
 .led-wall {
-  margin-bottom: 20px;
-  padding: 500px;
-  height: 300px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #0072bb;
-  color: #ffffff;
+  background-image: url("https://www.avfx.com/wp-content/uploads/2018/11/led-wall-installation.jpg");
 }
 
 .react-calc {
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #0072bb;
-  color: #ffffff;
+  background-image: url("https://cdn.vectorstock.com/i/1000v/74/46/realistic-calculator-isolated-on-white-vector-11307446.jpg");
 }
 
 .pastel-puzzles {
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #0072bb;
-  color: #ffffff;
+  background-image: url("https://www.publicdomainpictures.net/pictures/80000/velka/jigsaw-puzzle.jpg");
 }
 
 .surf-report {
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #0072bb;
-  color: #ffffff;
+  background-image: url("https://www.wallpaperflare.com/static/330/242/342/surf-outdoor-sports-surfer-surfing-wallpaper.jpg");
 }
 
-.run-buddy img{
+.run-buddy img {
   max-height: 200px;
 
 }
 
-.led-wall img{
+.led-wall img {
   max-height: 200px;
-  
+
 }
 
-.react-calc img{
+.react-calc img {
   max-height: 200px;
-  
+
 }
 
-.pastel-puzzles img{
+.pastel-puzzles img {
   max-height: 200px;
-  
+
 }
 
-.surf-report img{
+.surf-report img {
   max-height: 200px;
-  
+
 }
 
-/* media queries */
 
-/* media queries for a max-width of 980px */
 @media screen and (max-width: 980px) {
   header {
     padding: 0 0 10px 0;
     justify-content: center;
     text-align: center;
   }
+
+  @media screen and (max-width: 768px) {
+    body {
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+
+
 
   header h1 {
     width: 100%;
@@ -311,12 +308,12 @@ main {
     justify-content: center;
   }
 
-  .page-section > h2,
-  .page-section > div {
+  .page-section>h2,
+  .page-section>div {
     flex: 0 0 100%;
   }
 
-  .page-section > h2 {
+  .page-section>h2 {
     border-right: none;
     border-bottom: 4px solid var(--primary);
     margin-bottom: 20px;
@@ -325,5 +322,3 @@ main {
     font-size: 7vw;
   }
 }
-
-/* TODO: add media query for a max-width of 768px */
